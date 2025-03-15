@@ -1,0 +1,263 @@
+:root {
+  --blackText: #000;
+  --buttonColor: #fcaa68;
+  --buttonHover: #e68433;
+  --label: #ffa460;
+  --white: #fff;
+  --coffe: #46220f;
+  --boxShadowButton: #87bfd8;
+  --fuente-principal: "Rye", serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+}
+
+@font-face {
+  font-family: 'Seurat';
+  src: url('https://assets.codepen.io/4175254/FOT-Seurat+Pro+DB.otf') format('opentype');
+}
+
+.rye-regular {
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  background-image: url(/assets/Western_Backgroung2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--blackText);
+  font-family: var(--fuente-principal);
+}
+
+.contenedor{
+  width: 90%;
+  max-width: 1200px;;
+  margin: 20px auto;
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 3fr; /* Sidebar más pequeño y contenido más grande */
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "sidebar contenido"
+                       "sidebar contenido"
+                       "sidebar contenido"
+                       "sidebar contenido";
+}
+
+.contenedor .contenido{
+  grid-area: contenido;
+
+}
+
+.contenedor > div.contenedor,
+.contenedor .contenido,
+.contenedor .sidebar{
+    /*background: #ffa460 ;*/
+    padding: 20px;
+    border-radius: 4px;
+}
+
+
+.contenedor .sidebar{
+   grid-column: 3/4;
+   /*background: #ffa460;*/
+   text-align: center;
+   min-height: 100px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   grid-area: sidebar;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: auto auto; /* Dos filas para sidebar y contenido */
+    grid-template-areas: "sidebar" "contenido";
+  }
+
+  .contenedor .sidebar {
+    grid-column: auto;
+    min-height: auto;
+  }
+
+  .contenedor .contenido img {
+    width: 90%; /* Aumenta el ancho en móviles */
+    max-width: 400px; /* Permite un poco más de tamaño */
+  }
+}
+
+.right-section{
+  background-image: url(/assets/Wanted.png);
+  min-height: 100vh; 
+  background-size: cover; 
+  background-position: center;
+
+}
+
+.right-section .button-Select{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: flex-end;
+  gap: 150px;
+  padding-top: 380px;
+  padding-bottom: 50px; 
+}
+
+
+.input-field{
+  position: relative;
+}
+
+.input-field input{
+  width: 250px;
+  height: 30px;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 0px 10px;
+  background: transparent;
+  color: var(--white);
+  outline: none;
+}
+
+.input-field label{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: var(--white);
+  font-size: 17px;
+  pointer-events: none;
+  transition: .3s;
+}
+
+input:focus{
+  border: 2px solid var(--buttonColor);
+}
+
+input:focus ~label,
+input:valid ~label{
+  top: 0;
+  font-size: 15px;
+  padding: 0 15px;
+  background: var(--label)
+}
+
+.left-section button{
+  background-color: var(--buttonColor);
+  color: var(--white);
+  font-size: 16px; 
+  font-weight: bold; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  display: block;
+  width: 100%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.left-section button:hover{
+  border-color: var(--buttonHover);
+}
+
+.left-section button:active{
+  background-color: var(--buttonHover);
+}
+
+.back-button {
+  font-family: var(--fuente-principal);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--buttonColor);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+  background-color: var(--buttonHover);
+}
+
+.button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .5em;
+  position: relative;
+  border-radius: 50px;
+  padding: 16px 24px;
+  background-color: var(--white);
+  box-shadow: 
+    inset 0 -4px 8px var(--boxShadowButton),
+    0 4px 6px rgba(#000, .2);
+  cursor: pointer;
+  color: var(--coffe);
+  transition: transform .4s cubic-bezier(.55, 1, .15, 1);
+  will-change: transform;
+  
+  &:active {
+    transform: scale(.92);
+    
+    &::after {
+      opacity: 1;
+    }
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-image-source: url('https://assets.codepen.io/4175254/mario-button-borders.png');
+    border-image-slice: 50%;
+    border-image-width: 40px;
+    border-style: solid;
+    transform: scale(1.04, 1.08);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(.55, 1, .15, 1);
+    will-change: transform;
+  }
+  
+  &:focus-visible::after {
+    opacity: 1;
+    animation: pulsate 1s infinite;
+  }
+}
+
+.button-image {
+  width: 1.75em;
+  height: 1.75em;
+  object-fit: contain;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1.04, 1.08);
+  }
+  50% {
+    transform: scale(1.08, 1.12);
+  }
+  100% {
+    transform: scale(1.04, 1.08);
+  }
+}

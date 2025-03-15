@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Récords</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+    </style>
+    <link rel="stylesheet" href="/Estilos/styleRécords.css">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <script src="/Js/Récords.js"></script>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    <div class="container">
+        <h1>Tabla de Récords</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Puntuación</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody id="scoreTableBody">
+                <!-- Aquí se insertarán los puntajes -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function goBack() {
+        window.location.href = "index.html"; 
+        }
+    </script>
+</body>
+</html>

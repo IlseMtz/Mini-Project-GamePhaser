@@ -1,0 +1,73 @@
+:root {
+    --blackText: #000;
+    --white: #fff;
+    --coffe: #863c14;
+    --coffe2: #85421e;
+    --fuente-principal: "Rye", serif;;
+}
+
+body { 
+    font-family: 'Delius Unicase';
+    margin: 0;
+    padding: 0;
+    background: url('../assets/Instrucciones.jpeg') no-repeat center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 200px; 
+}
+
+h1{
+    color: rgb(79, 52, 41);
+}
+
+b{
+    color: rgb(230, 121, 26);
+}
+
+p{
+    color: rgb(79, 52, 41);
+}
+
+.contenedor {
+    padding-left: 100px;
+    display: grid;
+    place-items: center;
+    width: 700px;
+    height: auto;
+}
+
+.recuadro {
+    font-size: medium;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    text-align: justify;
+}
+.back-button {
+    font-family: var(--fuente-principal);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--coffe);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+.back-button:hover {
+    background-color: var(--coffe2);
+}
+

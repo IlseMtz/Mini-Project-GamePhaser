@@ -1,0 +1,92 @@
+:root {
+    --blackText: #000;
+    --white: #fff;
+    --coffe: #863c14;
+    --coffe2: #85421e;
+    --fuente-principal: "Rye", serif;;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../assets/fondoCred.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--fuente-principal);
+    color: rgb(62, 36, 17);
+}
+
+.contener {
+    display: flex;
+    background: url('../assets/fondoCréditos.jpg') no-repeat center center;
+    background-size: contain;
+    width: 70%;
+    max-width: none; 
+    padding: 20px; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 80vh; 
+}
+
+.contenedor {
+    display: flex;
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.integrante {
+    padding: 20px;
+    max-width: 200px;
+}
+
+.integrante img {
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 75px;
+}
+
+.info-box {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    background: none;
+    padding: 10px;
+    font-family: var(--fuente-principal);
+    color: var(--white);
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid var(--coffe); 
+    border-radius: 5px;
+    width: 300px; 
+}
+
+.info-box p {
+    margin: 5px 0;
+}
+
+.back-button {
+    font-family: var(--fuente-principal);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--coffe);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+.back-button:hover {
+    background-color: var(--coffe2);
+}

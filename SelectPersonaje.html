@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+    </style>
+    <link rel="stylesheet" href="/Estilos/SelectPersonaje.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/Js/SaveName.js"></script>
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <title>Seleccionar Personaje</title>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    <div class="contenedor">
+        <main class="contenido">
+			<div class="right-section">
+                <div class="button-Select">
+                    <button class="button" type="button" onclick="selectCharacter('mario', 1)">
+                        <img class="button-image" src="/assets/iconAux.png" alt="" />
+                        <span>Saturno-Saturnin</span>
+                    </button>
+                    <button class="button" type="button" onclick="selectCharacter('luigi', 2)">
+                        <img class="button-image" src="/assets/icon.png" alt="" />
+                        <span>Bombardilo-Crocodilo</span>
+                    </button>
+                </div>
+            </div>
+    
+		</main>
+        <aside class="sidebar">
+            <div class="left-section">
+                <div class="input-field">
+                    <input type="text" id="playerName" required spellcheck="false">
+                    <label for="playerName">Enter your name</label>
+                </div>
+                <button onclick="saveName()">Save Name</button>
+            </div>
+        </aside>
+    </div>
+    <script>
+        function goBack() {
+        window.location.href = "index.html"; 
+        }
+    </script>
+</body>
+</html>

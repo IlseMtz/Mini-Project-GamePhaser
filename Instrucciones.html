@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones</title>
+    <link rel="stylesheet" href="Estilos/styleInstrucciones.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+</head>
+
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    <div class="contenedor">
+        <div class="recuadro">
+            <h1>Instrucciones del Juego</h1>
+            <li>Tienes <b>60 segundos</b> para finalizar cada nivel.</li>
+            <li>Cuentas con <b>3 vidas</b> para pasar el juego. Si se agotan, la aventura terminará.</li>
+            <li>Evita a toda costa los cactus y las rocas (éstas aparecen a partir del segundo nivel). Si chocas con ellos, perderás una vida.</li>
+            <li>Recoge las <b>cervezas</b> que caen del cielo. Durante <b>10 segundos</b>, cada moneda que tomes te dará <b>50 puntos extra</b>.</li>
+            <li>Al igual, las <b>herraduras</b> otorgan <b>100 puntos extra</b> por cada moneda recogida (durante <b>10 segundos</b>).</li>
+            <b><p>CONTROLES DEL PERSONAJE</p></b>
+            <li>Presione la tecla 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                    <path d="M5 12l14 0"></path>
+                    <path d="M5 12l4 4"></path>
+                    <path d="M5 12l4 -4"></path> "
+                </svg>
+                para que el personaje avance hacía la izquierda.
+            </li>
+            <li>Presione la tecla 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                    <path d="M5 12l14 0"></path>
+                    <path d="M15 16l4 -4"></path>
+                    <path d="M15 8l4 4"></path>
+                </svg>
+                para que el personaje avance a la derecha.
+                </li>
+            <li>Presione la tecla
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                    <path d="M12 5l0 14"></path>
+                    <path d="M16 9l-4 -4"></path>
+                    <path d="M8 9l4 -4"></path>
+                </svg>
+                para saltar.
+            </li>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+        window.location.href = "index.html"; 
+        }
+    </script>
+</body>
+</html>

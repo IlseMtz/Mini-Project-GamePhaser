@@ -1,0 +1,69 @@
+:root {
+    --blackText: #000;
+    --white: #fff;
+    --coffe: #46220f;
+    --fuente-principal: "Rye", serif;;
+}
+
+.rye-regular {
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-image: url(/assets/menuBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.logo-container img {
+    width: 600px; 
+    height: auto;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; 
+    position: absolute;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu button {
+    font-family: var(--fuente-principal);
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    background-image: url('/assets/wood_texture2.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black; 
+}
+
+.menu button:hover {
+    filter: brightness(1.2); 
+}

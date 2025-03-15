@@ -1,0 +1,67 @@
+:root {
+    --blackText: #000;
+    --white: #fff;
+    --coffe: #863c14;
+    --coffe2: #85421e;
+    --fuente-principal: "Rye", serif;;
+}
+
+.rye-regular {
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-image: url(/assets/Récords.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--fuente-principal);
+    text-align: left;
+}
+
+h1{
+    color: var(--white);
+}
+.container {
+    width: 50%;
+    margin: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: transparent;
+}
+
+.back-button {
+    font-family: var(--fuente-principal);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--coffe);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+.back-button:hover {
+    background-color: var(--coffe2);
+}

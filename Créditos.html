@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créditos</title>
+    <link rel="stylesheet" href="Estilos/styleCréditos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">Back</button>
+    <div class="info-box">
+        <p id="fecha"><b>Fecha: </b><span id="current-date"></span></p>
+        <p>TECNOLOGÍAS WEB. ISC 6°C.</p>
+    </div>
+    <div class="contener">
+        <div class="contenedor">
+            <div class="integrante">
+                <img src="assets/Ilse.jpg" alt="Ilse">
+                <p>Martínez Espinosa Ilse Jacqueline</p>
+            </div>
+            <div class="integrante">
+                <img src="assets/Nadia.jpg" alt="Nadia">
+                <p>Ramírez Solis Nadia Guadalupe</p>
+            </div>
+            <div class="integrante">
+                <img src="assets/Guada.jpg" alt="Guada">
+                <p>Rodríguez Guadarrama Uriel</p>
+            </div>
+        </div>
+    </div>  
+    <script>
+        function goBack() {
+            window.location.href = "index.html"; 
+        }
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
