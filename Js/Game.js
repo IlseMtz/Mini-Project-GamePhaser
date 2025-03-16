@@ -518,6 +518,7 @@
                 onAndOf=false;
             }
             if(nivelActual>=3){
+                saveScore();
                 window.location.href = "ganaste.html";
             }
 
